@@ -9,7 +9,6 @@ public class Calculadora {
         double totalReal = realPart1 + realPart2;
         double totalImaginary = imaginaryPart1 + imaginaryPart2;
             
-        // prueba buenas tardes
         
         return new double[]{totalReal, totalImaginary};
     }
