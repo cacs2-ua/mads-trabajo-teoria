@@ -8,6 +8,7 @@
 
         // Indica que se ejecute en la shell (bash, CMD, etc.)
         "isShellCommand": true,
+        
 
         // Comando TCR
         "cmd": "mvn test && git add . && git commit -m \"TCR auto-commit\" || git reset --hard HEAD",
