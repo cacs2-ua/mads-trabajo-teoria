@@ -24,6 +24,7 @@ public class Calculadora {
         return Math.round(a * b * Math.pow(10, precision)) / Math.pow(10, precision);
     }
 
+
     public static double dividir(double a, double b, int precision) {
         b = Math.round(b * 1000000.0) / 1000000.0;
         if (b == 0) {

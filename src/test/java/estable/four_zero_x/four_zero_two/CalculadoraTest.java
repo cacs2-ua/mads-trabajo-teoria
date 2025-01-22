@@ -86,148 +86,18 @@ public class CalculadoraTest {
        assertEquals(4.7370, Calculadora.decimalLog(54576.5849,4));
     }
 
-
-    /*
     @Test
-    public void testCalculateSuma() {
-        String userInput = "1\n2,0\n3,0\n6\n";
-        System.setIn(new ByteArrayInputStream(userInput.getBytes()));
-
-        Calculadora.calculateWithScanner(new Scanner(System.in));
-
-        String expectedOutput = "Selecciona una opción:\n" +
-                "1. Suma\n" +
-                "2. Resta\n" +
-                "3. Multiplicación\n" +
-                "4. División\n" +
-                "5. Exponienciación\n" +
-                "6. Salir\n" +
-                "Escribe el primer número:\n" +
-                "Escribe el segundo número:\n" +
-                "Resultado: 5.0\n" +
-                "Selecciona una opción:\n" +
-                "1. Suma\n" +
-                "2. Resta\n" +
-                "3. Multiplicación\n" +
-                "4. División\n" +
-                "5. Exponienciación\n" +
-                "6. Salir\n" +
-                "Saliendo...\n";
-        assertEquals(expectedOutput, outContent.toString().replace("\r", ""));
+    public void testDivisionPorCero() {
+        Exception exception = null;
+        try {
+            Calculadora.dividir(10, 0, 2);
+        } catch (ArithmeticException e) {
+            exception = e;
+        }
+        assertEquals(ArithmeticException.class, exception.getClass());
     }
 
-    @Test
-    public void testCalculateResta() {
-        String userInput = "2\n5,0\n3,0\n6\n";
-        System.setIn(new ByteArrayInputStream(userInput.getBytes()));
 
-        Calculadora.calculateWithScanner(new Scanner(System.in));
-
-        String expectedOutput = "Selecciona una opción:\n" +
-                "1. Suma\n" +
-                "2. Resta\n" +
-                "3. Multiplicación\n" +
-                "4. División\n" +
-                "5. Exponienciación\n" +
-                "6. Salir\n" +
-                "Escribe el primer número:\n" +
-                "Escribe el segundo número:\n" +
-                "Resultado: 2.0\n" +
-                "Selecciona una opción:\n" +
-                "1. Suma\n" +
-                "2. Resta\n" +
-                "3. Multiplicación\n" +
-                "4. División\n" +
-                "5. Exponienciación\n" +
-                "6. Salir\n" +
-                "Saliendo...\n";
-        assertEquals(expectedOutput, outContent.toString().replace("\r", ""));
-    }
-
-    @Test
-    public void testCalculateMultiplicacion() {
-        String userInput = "3\n3,0\n4,0\n6\n";
-        System.setIn(new ByteArrayInputStream(userInput.getBytes()));
-
-        Calculadora.calculateWithScanner(new Scanner(System.in));
-
-        String expectedOutput = "Selecciona una opción:\n" +
-                "1. Suma\n" +
-                "2. Resta\n" +
-                "3. Multiplicación\n" +
-                "4. División\n" +
-                "5. Exponienciación\n" +
-                "6. Salir\n" +
-                "Escribe el primer número:\n" +
-                "Escribe el segundo número:\n" +
-                "Resultado: 12.0\n" +
-                "Selecciona una opción:\n" +
-                "1. Suma\n" +
-                "2. Resta\n" +
-                "3. Multiplicación\n" +
-                "4. División\n" +
-                "5. Exponienciación\n" +
-                "6. Salir\n" +
-                "Saliendo...\n";
-        assertEquals(expectedOutput, outContent.toString().replace("\r", ""));
-    }
-
-    @Test
-    public void testCalculateDivision() {
-        String userInput = "4\n10,0\n2,0\n6\n";
-        System.setIn(new ByteArrayInputStream(userInput.getBytes()));
-
-        Calculadora.calculateWithScanner(new Scanner(System.in));
-
-        String expectedOutput = "Selecciona una opción:\n" +
-                "1. Suma\n" +
-                "2. Resta\n" +
-                "3. Multiplicación\n" +
-                "4. División\n" +
-                "5. Exponienciación\n" +
-                "6. Salir\n" +
-                "Escribe el primer número:\n" +
-                "Escribe el segundo número:\n" +
-                "Resultado: 5.0\n" +
-                "Selecciona una opción:\n" +
-                "1. Suma\n" +
-                "2. Resta\n" +
-                "3. Multiplicación\n" +
-                "4. División\n" +
-                "5. Exponienciación\n" +
-                "6. Salir\n" +
-                "Saliendo...\n";
-        assertEquals(expectedOutput, outContent.toString().replace("\r", ""));
-    }
-
-    @Test
-    public void testCalculateExponenciacion() {
-        String userInput = "5\n2,0\n3,0\n6\n";
-        System.setIn(new ByteArrayInputStream(userInput.getBytes()));
-
-        Calculadora.calculateWithScanner(new Scanner(System.in));
-
-        String expectedOutput = "Selecciona una opción:\n" +
-                "1. Suma\n" +
-                "2. Resta\n" +
-                "3. Multiplicación\n" +
-                "4. División\n" +
-                "5. Exponienciación\n" +
-                "6. Salir\n" +
-                "Escribe el primer número:\n" +
-                "Escribe el segundo número:\n" +
-                "Resultado: 8.0\n" +
-                "Selecciona una opción:\n" +
-                "1. Suma\n" +
-                "2. Resta\n" +
-                "3. Multiplicación\n" +
-                "4. División\n" +
-                "5. Exponienciación\n" +
-                "6. Salir\n" +
-                "Saliendo...\n";
-        assertEquals(expectedOutput, outContent.toString().replace("\r", ""));
-    }
-*/
 
     @AfterEach
     public void tearDown() {
