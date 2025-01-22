@@ -66,6 +66,7 @@ public class Calculadora {
         }
         return Math.round(Math.log10(a) * Math.pow(10, precision)) / Math.pow(10, precision);
     }
+    
 
     // Modified method to accept a Scanner as a parameter
     public static void calculateWithScanner(Scanner scanner) {
