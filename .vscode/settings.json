@@ -1,18 +1,25 @@
 {
   // Otras configuraciones que ya tengas...
-
   "emeraldwalk.runonsave": {
     "commands": [
       {
-        // 'match' define sobre qué archivos debe dispararse la acción. '.*' = CUALQUIER archivo.
+        // Ejecutarse con TODOS los archivos que se guarden
         "match": ".*",
 
-        // 'cmd' es el comando que se va a ejecutar cada vez que guardes un archivo.
-        // TCR: si los tests pasan -> commit, si fallan -> revert
+        // Indica que se ejecute en la shell (bash, CMD, etc.)
+        "isShellCommand": true,
+
+        // Comando TCR
         "cmd": "mvn test && git add . && git commit -m \"TCR auto-commit\" || git reset --hard HEAD",
 
-        // 'runIn': 'terminal' para ver la salida de TCR en la terminal integrada de VS Code (CMD en Windows).
-        "runIn": "terminal"
+        // Mostrar la salida en la terminal integrada de VSCode
+        "runIn": "terminal",
+
+        // Forzar apertura (o foco) de la terminal al ejecutar
+        "focus": true,
+
+        // Evita ejecución "silenciosa" y obliga a mostrar resultados
+        "silent": false
       }
     ]
   }
