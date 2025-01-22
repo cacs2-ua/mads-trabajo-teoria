@@ -10,7 +10,7 @@ public class Calculadora {
         double totalImaginary = imaginaryPart1 + imaginaryPart2;
 
         // hola
-        
+            
         return new double[]{totalReal, totalImaginary};
     }
 
