@@ -86,6 +86,18 @@ public class CalculadoraTest {
        assertEquals(4.7370, Calculadora.decimalLog(54576.5849,4));
     }
 
+    @Test
+    public void testDivisionPorCero() {
+        Exception exception = null;
+        try {
+            Calculadora.dividir(10, 0, 2);
+        } catch (ArithmeticException e) {
+            exception = e;
+        }
+        assertEquals(ArithmeticException.class, exception.getClass());
+    }
+
+
 
     @AfterEach
     public void tearDown() {
